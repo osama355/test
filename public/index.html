@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <div class="address">
+                <div>
+                 <i class="fas fa-envelope" > <span style="font-family: sans-serif; font-size: 0.8em; font-weight: lighter;">customercare@traveltriangle.com</span> </i>
+                </div>
+                <div class="v1" style="border-left: 1px solid white; height: 100%"></div>
+                <div>
+                    <i class="fas fa-phone"> <span style="font-family: sans-serif; font-size: 0.8em; font-weight: lighter;">111-222-333</span> </i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+          <div class="top">
+            <h2 style="color: black;">Event Management</h2>
+            <div class="buttons">
+              <button onclick="openForm()" type="button" class="btn btn-success">Sign In</button>
+              <button onclick="openSign()" type="button" class="btn btn-success">Sign Up</button>
+            </div>
+
+            <div class="form-popup" id="myForm">
+              <form class="form-container">
+                <h1 style="color: black;">Sign In</h1>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <button type="submit" class="btn">Sign in</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+
+            <div class="form-popup" id="mySignUp">
+              <form class="form-container">
+                <h1 style="color: black;">Sign Up</h1>
+
+                <label for="fname"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="" required>
+
+                <label for="fname"><b>Phone</b></label>
+                <input type="text" placeholder="Enter Number" name="number" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <button type="submit" class="btn">Sign in</button>
+                <button type="submit" class="btn cancel" onclick="closeSign()">Close</button>
+              </form>
+            </div>
+
+          </div>
+          <div class="subheading">
+            <h1 >Give your events a royal look</h1>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+          </div>
+
+          <div class="location">
+            <div class="input-group group1">
+              <div class="input-location" style="background-color: white; border: 1px solid black; display: flex; justify-content: center; align-items: center; padding-left: 2%; ">
+                <i style="color: gray;" class="fas fa-map-marker-alt"></i>
+                <input style="border: none; outline: none;" type="search" class="form-control rounded search" placeholder="Find location..." aria-label="Search"
+                aria-describedby="search-addon" />
+              </div>
+              <div class="search-service" style="background-color: white; border: 1px solid black; display: flex; justify-content: center; align-items: center; padding-left: 2%; ">
+                <i style="color: gray;" class="fas fa-store"></i>
+                <input style="border: none; outline: none;" type="search" class="form-control rounded search" placeholder="Select services..." aria-label="Search"
+                aria-describedby="search-addon" />
+              </div>
+              <button style="background-color: black; color: white; border: none;" type="button" class="btn btn-outline-primary">search</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 1%; display: flex; flex-direction: column; align-items: center; " class="work">
+          <h1 style="color: black;">Our Best Services For You</h1>
+          <div style="display: flex; justify-content: space-around;  flex-wrap: wrap; padding-left: 5%; padding-right: 5%; margin-top: 2%;" class="categories">
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%;  " class=party-hall">
+              <i style="font-size: 6em;"  class="fas fa-hotel"></i>
+              <h4>PARTY HALL</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="saloon">
+              <i style="font-size: 6em;" class="fas fa-mortar-pestle"></i>
+              <h4>SALOONS</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="catering">
+              <i style="font-size: 6em;" class="fas fa-utensil-spoon"></i>
+              <h4>CATERING SERVICES</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%;  " class="dress">
+              <i style="font-size: 6em;"  class="fas fa-user-secret"></i>
+              <h4>DRESS DESIGNER</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="event">
+              <i style="font-size: 6em;" class="fas fa-user-tie"></i>
+              <h4>EVENT ORGANIZER</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="stage">
+              <i style="font-size: 6em;" class="fas fa-holly-berry"></i>
+              <h4>STAGE DECORATION</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="lighting">
+              <i style="font-size: 6em;" class="fas fa-hanukiah"></i>
+              <h4>LIGHTING DECORATION</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+            <div style="border: 1px solid black; display: flex; flex-direction: column; align-items: center; padding-top: 5%; padding: 2%; margin-top: 1%; " class="car">
+              <i style="font-size: 6em;" class="fas fa-car"></i>
+              <h4>RENT A CAR</h4>
+              <p>35 Event | 15 service provider</p>
+            </div>
+          </div>
+        </div>'
+        
+        <footer style="background-color:black;" class="page-footer font-small stylish-color-dark pt-4">
+
+          <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+             
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 style="color: white;" class="font-weight-bold text-uppercase mt-3 mb-4">Get Inspired</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Testimonials</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Blog</a>
+                  </li>
+                  
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 style="color: white;" class="font-weight-bold text-uppercase mt-3 mb-4">Plicies</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Terms & Conditions</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Privacy & Policy</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Cancellation</a>
+                  </li>
+                 
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 mx-auto">
+
+                <!-- Links -->
+                <h5 style="color: white;" class="font-weight-bold text-uppercase mt-3 mb-4">More</h5>
+
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">FAQ</a>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none; color: white;" href="#!">Contact Us</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Grid column -->
+              <div class="col-md-4 mx-auto">
+
+                <!-- Content -->
+                <h5 style="color: white;" class="font-weight-bold text-uppercase mt-3 mb-4">Our Story</h5>
+                <p style="color: white;">Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                  consectetur
+                  adipisicing elit.</p>
+
+              </div>
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Footer Links -->
+
+          <hr>
+
+       
+
+          <hr>
+
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-fb mx-1">
+                <i style="color: white;" class="fab fa-facebook-f"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-tw mx-1">
+                <i style="color: white;"  class="fab fa-twitter"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-gplus mx-1">
+                <i style="color: white;"  class="fab fa-google-plus-g"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-li mx-1">
+                <i style="color: white;"  class="fab fa-linkedin-in"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-dribbble mx-1">
+                <i style="color: white;"  class="fab fa-dribbble"> </i>
+              </a>
+            </li>
+          </ul>
+          <!-- Social buttons -->
+
+          <!-- Copyright -->
+          <div style="color: gray"  class="footer-copyright text-center py-3">All right reserved © 2017
+            
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+       
+
+
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
+      function openSign(){
+        document.getElementById("mySignUp").style.display="block"
+      }
+
+      function closeSign(){
+        document.getElementById("mySignUp").style.display="none";
+      }
+    </script>
+  
+</body>
+</html>
